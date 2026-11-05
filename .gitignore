@@ -1,0 +1,14 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment & Dependencies
+.env
+node_modules/
+
+# Database & Persistent Data
+data/
+*.rdb
+*.aof
