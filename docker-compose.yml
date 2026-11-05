@@ -7,7 +7,7 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
-    command: redis-server --appendonly yes
+    command: ["redis-server", "--appendonly", "yes"]
 
   mongodb:
     image: mongo:7.0
@@ -17,9 +17,9 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: mydatabase
 
 volumes:
   redis_data:
-    driver: local
   mongo_data:
-    driver: local
